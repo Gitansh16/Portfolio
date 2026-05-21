@@ -1,20 +1,83 @@
-<<<<<<< HEAD
-# React + Vite
+# 🚀 Gitansh Pise — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=28&pause=1000&color=FFFFFF&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;Frontend+Developer;React+%2B+Tailwind+Developer;Building+Modern+Web+Experiences" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<br/>
 
-## React Compiler
+<img src="https://img.shields.io/github/stars/Gitansh16/Portfolio?style=for-the-badge&color=000000" />
+<img src="https://img.shields.io/github/forks/Gitansh16/Portfolio?style=for-the-badge&color=111111" />
+<img src="https://img.shields.io/github/license/Gitansh16/Portfolio?style=for-the-badge&color=222222" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Portfolio
->>>>>>> 38e79bf2ec8680639760c40256601f987529d50f
+# ✨ About The Project
+
+A modern futuristic developer portfolio built with:
+
+- ⚛️ React + Vite
+- 🎨 Tailwind CSS
+- 🎞 Framer Motion
+- ✨ Smooth Animations
+- 🌌 Interactive UI
+- 📱 Fully Responsive Design
+- 🚀 Optimized Performance
+
+This portfolio showcases my projects, skills, animations, and creative frontend development work.
+
+---
+
+# 🌐 Live Demo
+
+🔗 **Portfolio Website**  
+https://your-portfolio-link.vercel.app
+
+---
+
+# 🖼 Preview
+
+<div align="center">
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3A3bDB6dDBxY2JzYjRwNTRxM2F4YW43eHFjZ2hjNmd6bXN4dG1teiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0HlBO7eyXzSZkJri/giphy.gif" width="800"/>
+
+</div>
+
+---
+
+# ⚡ Features
+
+✨ Smooth scroll animations  
+✨ Interactive project showcase  
+✨ Responsive mobile-first design  
+✨ Animated transitions with Framer Motion  
+✨ Dynamic project sections  
+✨ Custom hover effects  
+✨ Modern UI/UX aesthetics  
+✨ Optimized React architecture  
+
+---
+
+# 🛠 Tech Stack
+
+<div align="center">
+
+| Frontend | Styling | Animation | Build Tool |
+|----------|----------|------------|------------|
+| React | Tailwind CSS | Framer Motion | Vite |
+
+</div>
+
+---
+
+# 📂 Folder Structure
+
+```bash
+src/
+ ├── assets/
+ ├── components/
+ ├── sections/
+ ├── App.jsx
+ └── main.jsx
