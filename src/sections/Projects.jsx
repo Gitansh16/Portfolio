@@ -53,7 +53,7 @@ export default function Projects() {
         image: img1,
       },
       {
-        title: "Gamily",
+        title: "AutoSense",
         link: "https://gamilyapp.com/",
         bgColor: "#3884d3",
         image: img2,
