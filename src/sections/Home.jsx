@@ -53,7 +53,7 @@ export default function Home() {
       "Engineer by obsession.",
       "Builder by instinct.",
     ],
-    []
+    [],
   );
 
   const [index, setIndex] = useState(0);
@@ -63,30 +63,33 @@ export default function Home() {
   useEffect(() => {
     const current = roles[index];
 
-    const timeout = setTimeout(() => {
-      // Typing
-      if (!deleting && subIndex < current.length) {
-        setSubIndex((v) => v + 1);
-      }
+    const timeout = setTimeout(
+      () => {
+        // Typing
+        if (!deleting && subIndex < current.length) {
+          setSubIndex((v) => v + 1);
+        }
 
-      // Pause
-      else if (!deleting && subIndex === current.length) {
-        setTimeout(() => {
-          setDeleting(true);
-        }, 1000);
-      }
+        // Pause
+        else if (!deleting && subIndex === current.length) {
+          setTimeout(() => {
+            setDeleting(true);
+          }, 1000);
+        }
 
-      // Deleting
-      else if (deleting && subIndex > 0) {
-        setSubIndex((v) => v - 1);
-      }
+        // Deleting
+        else if (deleting && subIndex > 0) {
+          setSubIndex((v) => v - 1);
+        }
 
-      // Next Word
-      else if (deleting && subIndex === 0) {
-        setDeleting(false);
-        setIndex((p) => (p + 1) % roles.length);
-      }
-    }, deleting ? 40 : 80);
+        // Next Word
+        else if (deleting && subIndex === 0) {
+          setDeleting(false);
+          setIndex((p) => (p + 1) % roles.length);
+        }
+      },
+      deleting ? 40 : 80,
+    );
 
     return () => clearTimeout(timeout);
   }, [subIndex, deleting, index, roles]);
@@ -185,9 +188,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Hello I'm
+              Hello there, I'm <br />
               <br />
-
               <span
                 className="
                   text-white
@@ -213,11 +215,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              I like creating systems that learn, adapt, and scale —
-              from deep learning models and predictive AI pipelines
-              to cloud-native infrastructure and intelligent automation.
+              I build intelligent digital products — powered by AI, optimized
+              for scale, engineered for impact.
               <br />
-              
             </motion.p>
 
             {/* Buttons */}
@@ -302,25 +302,28 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className ="relative hidden lg:block">
+        <div className="relative hidden lg:block">
           <div
-          className="absolute top-1/2 -translate-y-1/2 pointer-events-none "
-          style={{
-            right: "10px",
-            width: "min(22vw,410px)",
-            height: "min(40vw,760px)",
-            borderradius: "50%",
-            filter: "blur(38px)",
-            opacity: 0.32,
-            background:
-              "conic-gradient(from 0deg , #1cd8d2, #00bf8f, #302b63, #1cd8d2)",
-          }}/>
-          <motion.img src={Logo2} alt="Gitansh Pise"
+            className="absolute top-1/2 -translate-y-1/2 pointer-events-none "
+            style={{
+              right: "10px",
+              width: "min(22vw,410px)",
+              height: "min(40vw,760px)",
+              borderradius: "50%",
+              filter: "blur(38px)",
+              opacity: 0.32,
+              background:
+                "conic-gradient(from 0deg , #1cd8d2, #00bf8f, #302b63, #1cd8d2)",
+            }}
+          />
+          <motion.img
+            src={Logo2}
+            alt="Gitansh Pise"
             className="absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none"
             style={{
               right: "-30px",
               width: "min(45vw,780px)",
-              maxHeight: "90vh"
+              maxHeight: "90vh",
             }}
             initial={{ opacity: 0, y: 40, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}

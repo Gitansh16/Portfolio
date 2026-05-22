@@ -6,8 +6,8 @@ export default function About() {
 
   const stats = [
     { label: "Experience", value: "1+ years" },
-    { label: "Speciality", value: "Full Stack" },
-    { label: "Focus", value: "Performance & UX" },
+    { label: "Speciality", value: "Full Stack • AI • Cloud" },
+    { label: "Focus", value: "Performance • UX • Scalability" },
   ];
 
   const glows = [
@@ -108,11 +108,44 @@ turning ambitious ideas into reality through code.
     About Me
   </h3>
 
-  <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
-    I'm a Software Developer, Content Creator, and Web Developer —
-    passionate about building fast, resilient applications and sharing
-    coding insights on Instagram and YouTube.
-  </p>
+  <div className="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed">
+  
+  <div className="flex items-start gap-3">
+    <span className="text-cyan-400 mt-1">✦</span>
+    <p>
+      Full Stack Developer, AI Enthusiast, and Tech Creator focused on building impactful digital experiences.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3">
+    <span className="text-cyan-400 mt-1">✦</span>
+    <p>
+      Experienced in AI-powered applications, cloud-native systems, DevOps workflows, and scalable web platforms.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3">
+    <span className="text-cyan-400 mt-1">✦</span>
+    <p>
+      Built intelligent healthcare solutions, fraud detection systems, learning platforms, and immersive portfolios.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3">
+    <span className="text-cyan-400 mt-1">✦</span>
+    <p>
+      Passionate about futuristic UI/UX, performance-driven engineering, and modern product experiences.
+    </p>
+  </div>
+
+  <div className="flex items-start gap-3">
+    <span className="text-cyan-400 mt-1">✦</span>
+    <p>
+      Actively share coding insights, development content, and creative tech ideas across social platforms.
+    </p>
+  </div>
+
+</div>
 
   <p className="mt-4 text-gray-400 text-base sm:text-lg">
     I love turning ideas into scalable, user-friendly products that make

@@ -10,8 +10,16 @@ const publications = [
     year: "2025",
     details:
       "Published in Springer Nature Singapore – Lecture Notes in Networks and Systems (LNNS), Vol. 1505, 2026 (Scopus Indexed).",
-    extra:
-      "DOI: 10.1007/978-981-96-8687-2_27",
+    extra: (
+      <a
+        href="https://doi.org/10.1007/978-981-96-8687-2_27"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-cyan-300 underline"
+      >
+        DOI: 10.1007/978-981-96-8687-2_27
+      </a>
+    ),
     image: Springer,
   },
 
