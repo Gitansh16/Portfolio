@@ -164,8 +164,7 @@ export default function Skills() {
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="
-            absolute top-1/4 left-0
-            w-[300px] h-[300px]
+            absolute top-1/4 left-0 w-[300px] h-[300px]
             rounded-full
             bg-gradient-to-r
             from-[#302b63]

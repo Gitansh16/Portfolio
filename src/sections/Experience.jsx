@@ -13,24 +13,36 @@ import {
 
 const experiences = [
   {
-    role: "Web Developer",
-    company: "Brain Mentors",
-    duration: "2022",
-    description:
-      "Built high-performance apps, integrated AI features, improved engagement by 10%.",
+      type: "experience",
+  role: "Software Developer Intern",
+  company: "LogicGoals System, Nagpur",
+  duration: "Dec 2024 – Feb 2025",
+  description:
+    "Built responsive web interfaces and integrated secure payment workflows using PHP, HTML, CSS, and JavaScript.",
   },
+
   {
-    role: "Web Developer Intern",
-    company: "Mobisoft Technologies",
-    duration: "2022 - 2023",
-    description: "Gained hands-on web development experience.",
+    type: "education",
+    role: "B.Tech in Computer Science and Engineering",
+    company: "SRM Institute of Science and Technology",
+    duration: "June 2022 – May 2026",
+    description: "CGPA: 9.18/10.00",
   },
+
   {
-    role: "Graduate Engineer",
-    company: "HCL Technologies",
-    duration: "2024 - 2025",
-    description:
-      "Built frontend of GenAI-powered PV Intake App with Next.js & TS for US client.",
+    type: "education",
+    role: "Pre-University Education",
+    company: "Adarsh Sanskar Vidyalaya & JR. College",
+    duration: "May 2022",
+    description: "Percentage: 78.83%",
+  },
+
+  {
+    type: "education",
+    role: "Secondary Education",
+    company: "St. Vincent Pallotti School",
+    duration: "May 2020",
+    description: "Percentage: 91%",
   },
 ];
 
@@ -66,11 +78,20 @@ function ExperienceItem({
     [-24, 0]
   );
 
+  const cardStyles =
+    exp.type === "education"
+      ? "bg-blue-950/40 border-blue-500/30"
+      : "bg-gray-900/80 border-gray-700/70";
+
   if (layout === "desktop") {
     return (
       <div className="relative flex flex-1 justify-center items-center min-w-0">
         <motion.div
-          className="z-10 w-7 h-7 rounded-full bg-white shadow-[0_0_0_8px_rgba(255,255,255,0.1)]"
+          className={`z-10 w-7 h-7 rounded-full shadow-[0_0_0_8px_rgba(255,255,255,0.1)] ${
+            exp.type === "education"
+              ? "bg-blue-400"
+              : "bg-white"
+          }`}
           style={{ scale, opacity }}
         />
 
@@ -84,14 +105,24 @@ function ExperienceItem({
         <motion.article
           className={`absolute ${
             idx % 2 === 0 ? "bottom-12" : "top-12"
-          } bg-gray-900/80 backdrop-blur border border-gray-700/70 rounded-xl p-7 w-[320px] shadow-lg`}
+          } ${cardStyles} backdrop-blur border rounded-xl p-7 w-[320px] shadow-lg`}
           style={{
             opacity,
             y,
             maxWidth: "90vw",
           }}
         >
-          <h3 className="text-xl font-semibold">
+          <span
+            className={`text-xs uppercase tracking-widest font-medium ${
+              exp.type === "education"
+                ? "text-blue-300"
+                : "text-gray-400"
+            }`}
+          >
+            {exp.type}
+          </span>
+
+          <h3 className="text-xl font-semibold mt-2">
             {exp.role}
           </h3>
 
@@ -110,19 +141,33 @@ function ExperienceItem({
   return (
     <div className="relative flex items-start">
       <motion.div
-        className="absolute -left-[14px] top-3 z-10 w-7 h-7 rounded-full bg-white shadow-[0_0_0_8px_rgba(255,255,255,0.1)]"
+        className={`absolute -left-[14px] top-3 z-10 w-7 h-7 rounded-full shadow-[0_0_0_8px_rgba(255,255,255,0.1)] ${
+          exp.type === "education"
+            ? "bg-blue-400"
+            : "bg-white"
+        }`}
         style={{ scale, opacity }}
       />
 
       <motion.article
-        className="bg-gray-900/80 backdrop-blur border border-gray-700/70 rounded-xl p-5 w-[90vw] max-w-sm ml-6 shadow-lg"
+        className={`${cardStyles} backdrop-blur border rounded-xl p-5 w-[90vw] max-w-sm ml-6 shadow-lg`}
         style={{ opacity, x }}
         transition={{
           duration: 0.4,
           delay: idx * 0.15,
         }}
       >
-        <h3 className="text-lg font-semibold break-words">
+        <span
+          className={`text-xs uppercase tracking-widest font-medium ${
+            exp.type === "education"
+              ? "text-blue-300"
+              : "text-gray-400"
+          }`}
+        >
+          {exp.type}
+        </span>
+
+        <h3 className="text-lg font-semibold mt-2 break-words">
           {exp.role}
         </h3>
 
@@ -198,7 +243,7 @@ export default function Experience() {
       >
         <div className="sticky top-0 h-screen flex flex-col">
           <h2 className="text-4xl sm:text-5xl font-semibold mt-5 text-center">
-            Experience
+            Journey
           </h2>
 
           <div className="flex flex-1 items-center justify-center px-6 pb-10">

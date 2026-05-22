@@ -6,9 +6,9 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 
-import img1 from "../assets/img1.JPG";
-import img2 from "../assets/img2.JPG";
-import img3 from "../assets/img3.JPG";
+import AutoSense from "../assets/AutoSense.png";
+import StudyNotion from "../assets/StudyNotion.png";
+import Musify from "../assets/Musify.png";
 
 const useIsMobile = (query = "(max-width: 639px)") => {
   const [isMobile, setIsMobile] = useState(() => {
@@ -45,28 +45,31 @@ export default function Projects() {
   const sceneRef = useRef(null);
 
   const projects = useMemo(
-    () => [
-      {
-        title: "Scania",
-        link: "https://www.nk.studio/",
-        bgColor: "#0d4d3d",
-        image: img1,
-      },
-      {
-        title: "AutoSense",
-        link: "https://gamilyapp.com/",
-        bgColor: "#3884d3",
-        image: img2,
-      },
-      {
-        title: "Hungry Tiger",
-        link: "https://www.eathungrytiger.com/",
-        bgColor: "#dc9317",
-        image: img3,
-      },
-    ],
-    []
-  );
+  () => [
+    {
+      title: "AutoSense",
+      link: "https://github.com/Gitansh16/AutoSense",
+      bgGradient:
+        "linear-gradient(135deg, #2261fb 0%, #6a57f6 50%, #903ef6 100%)",
+      image: AutoSense,
+    },
+    {
+      title: "StudyNotion",
+      link: "https://github.com/Gitansh16/StudyNotion",
+      bgGradient:
+        "linear-gradient(135deg, #f73385 0%, #f55957 50%, #f0b12c 100%)",
+      image: StudyNotion,
+    },
+    {
+      title: "Musify",
+      link: "https://github.com/Gitansh16/Musify",
+      bgGradient:
+        "linear-gradient(135deg, #ff7dc1 0%, #c65cff 50%, #8e5ce9 100%)",
+      image: Musify,
+    },
+  ],
+  []
+);
 
   const { scrollYProgress } = useScroll({
     target: sceneRef,
@@ -95,15 +98,15 @@ export default function Projects() {
       ref={sceneRef}
       className="relative text-white"
       style={{
-        height: `${100 * projects.length}vh`,
-        backgroundColor: activeProject.bgColor,
-        transition: "background-color 400ms ease",
-      }}
+  height: `${100 * projects.length}vh`,
+  background: activeProject.bgGradient,
+  transition: "background 500ms ease",
+}}
     >
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
         
         <h2
-          className={`text-3xl font-semibold z-10 text-center ${
+          className={`text-5xl font-semibold z-10 text-center ${
             isMobile ? "mt-4" : "mt-8"
           }`}
         >

@@ -4,11 +4,11 @@ import React, { useState, useEffect, useMemo } from "react";
 export default function IntroAnimation({ onFinish }) {
   const greetings = useMemo(
     () => [
-      "Namaste Developer 😄",
-      "Coffee First ☕",
-      "Code Later 💻",
-      "Brewing Ideas 🚀",
-      "Ctrl + Coffee + Create ✨",
+      "Namaste Developer...",
+      "Coffee First...",
+      "Code Later...",
+      "Brewing Ideas...",
+      "Ctrl + Coffee + Create...",
     ],
     []
   );
