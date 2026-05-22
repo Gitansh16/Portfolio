@@ -4,18 +4,11 @@ import React, { useState, useEffect, useMemo } from "react";
 export default function IntroAnimation({ onFinish }) {
   const greetings = useMemo(
     () => [
-      "Hello",
-      "नमस्ते",
-      "Hola",
-      "Bonjour",
-      "Ciao",
-      "Olá",
-      "Здравствуйте",
-      "Merhaba",
-      "Γειά",
-      "Hej",
-      "Hallo",
-      "Salam",
+      "Namaste Developer 😄",
+      "Coffee First ☕",
+      "Code Later 💻",
+      "Brewing Ideas 🚀",
+      "Ctrl + Coffee + Create ✨",
     ],
     []
   );
@@ -27,13 +20,13 @@ export default function IntroAnimation({ onFinish }) {
     if (index < greetings.length - 1) {
       const id = setTimeout(() => {
         setIndex((i) => i + 1);
-      }, 180);
+      }, 1100);
 
       return () => clearTimeout(id);
     } else {
       const t = setTimeout(() => {
         setVisible(false);
-      }, 300);
+      }, 1200);
 
       return () => clearTimeout(t);
     }
@@ -47,20 +40,25 @@ export default function IntroAnimation({ onFinish }) {
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
           transition={{
-            duration: 1.5,
+            duration: 1.2,
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <motion.h1
-            key={index}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.12 }}
-          >
-            {greetings[index]}
-          </motion.h1>
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={index}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-center px-6"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -40 }}
+              transition={{
+                duration: 0.45,
+                ease: "easeOut",
+              }}
+            >
+              {greetings[index]}
+            </motion.h1>
+          </AnimatePresence>
         </motion.div>
       )}
     </AnimatePresence>
